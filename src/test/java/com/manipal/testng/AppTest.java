@@ -19,13 +19,13 @@ public class AppTest
    @Before
 	public void before()
 	{
-		AppTest  hw= new AppTest();
+		App  hw= new App();
 		System.out.println("bfore");
 	}
 	@Test
 	public void TestHelloWorld()
 		{
-		AppTest  hw= new AppTest();
+		App  hw= new App();
 		String actual = hw.withHiMessage("Bhanu");
 		String expected = "Hi Bhanu";
 		assertEquals(expected, actual);
@@ -33,7 +33,7 @@ public class AppTest
 	@Test
 	public void testArrays()
 	{
-		AppTest  hw= new AppTest();
+		App  hw= new App();
 		String inputArray[]= {"Raj","Raj","Kumar","Ganesh"};
 		String expected[]= {"Raj","Kumar","Ganesh"};
 		String[] actuals = hw.removeDuplicates(inputArray);
