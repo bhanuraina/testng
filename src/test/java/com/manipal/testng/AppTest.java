@@ -26,7 +26,7 @@ public class AppTest
 	@Test
 	public void TestHelloWorld()
 		{
-		String actual = "Hi Bhanu");
+		String actual = "Hi Bhanu";
 		String expected = "Hi Bhanu";
 		assertEquals(expected, actual);
 	}
