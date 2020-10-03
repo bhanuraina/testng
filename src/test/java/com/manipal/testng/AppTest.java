@@ -16,16 +16,32 @@ public class AppTest
     /**
      * Rigorous Test :-)
      */
+	
+	public String withHiMessage(String name)
+	{
+		return "Hi " + name;
+		
+	}
+	
+
+		
+		
+	}
+	public String[] removeDuplicates(String[] inputArray) {
+		// TODO Auto-generated method stub
+		String expected[]= {"Raj","Kumar","Ganesh"};
+		return expected;
+	}
    @Before
 	public void before()
 	{
-		App  hw= new App();
+		AppTest  hw= new AppTest();
 		System.out.println("bfore");
 	}
 	@Test
 	public void TestHelloWorld()
 		{
-		App  hw= new App();
+		AppTest  hw= new AppTest();
 		String actual = hw.withHiMessage("Bhanu");
 		String expected = "Hi Bhanu";
 		assertEquals(expected, actual);
@@ -33,7 +49,7 @@ public class AppTest
 	@Test
 	public void testArrays()
 	{
-		App  hw= new App();
+		AppTest  hw= new AppTest();
 		String inputArray[]= {"Raj","Raj","Kumar","Ganesh"};
 		String expected[]= {"Raj","Kumar","Ganesh"};
 		String[] actuals = hw.removeDuplicates(inputArray);
