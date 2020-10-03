@@ -1,31 +1,32 @@
 package com.manipal.testng;
 
-
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.sql.Driver;
-
-import org.junit.jupiter.api.Test;
-import org.openqa.selenium.Platform;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-class App {
-	
-WebDriver driver;
-	@Test
-		public void testcase1() throws MalformedURLException
-	{
-		DesiredCapabilities cap =  DesiredCapabilities.chrome();
-		cap.setBrowserName("chrome");
-		cap.setPlatform(Platform.ANY);
-		driver = new RemoteWebDriver(new URL("http://192.168.1.85:4444/wd/hub"), cap);
-		driver.manage().window().maximize();
-		driver.navigate().to("http://www.google.com");
-		System.out.println(driver.getTitle());
-		
+public class App {
+public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+System.setProperty("webdriver.chrome.driver", "C:\\Users\\Acer\\Downloads\\chromedriver_win32\\chromedriver.exe");
+WebDriver dri = new ChromeDriver();
+dri.manage().window().maximize();
+dri.get("https://opensource-demo.orangehrmlive.com/");
+dri.manage().window().maximize();
+dri.findElement(By.name("txtUsername")).click();
+dri.findElement(By.name("txtUsername")).clear();
+System.out.println(dri.getTitle());
+dri.findElement(By.xpath("//*[@id='txtUsername']")).sendKeys("Admin");
+dri.findElement(By.xpath("//*[@id='txtPassword']")).sendKeys("admin123");
+
+System.out.println(dri.findElement(By.xpath("//*[@id='txtPassword']")).getAttribute("id"));
+dri.findElement(By.xpath("//*[@id='btnLogin']")).click();
+
+
+System.out.println(dri.findElement(By.xpath("//*[@id='welcome-menu']")).getAttribute("id"));
+dri.findElement(By.xpath("//*[@id='welcome']")).click();
+Thread.sleep(200);
+dri.findElement(By.xpath("//*[@id='welcome-menu']/ul/li[2]/a")).click();
+Thread.sleep(200);
+dri.close();
 	}
 }
