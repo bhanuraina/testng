@@ -17,21 +17,7 @@ public class AppTest
      * Rigorous Test :-)
      */
 	
-	public String withHiMessage(String name)
-	{
-		return "Hi " + name;
-		
-	}
 	
-
-		
-		
-	}
-	public String[] removeDuplicates(String[] inputArray) {
-		// TODO Auto-generated method stub
-		String expected[]= {"Raj","Kumar","Ganesh"};
-		return expected;
-	}
    @Before
 	public void before()
 	{
