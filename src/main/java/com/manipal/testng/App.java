@@ -14,20 +14,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 class App {
-	public String withHiMessage(String name)
-	{
-		return "Hi " + name;
-		
-	}
 	
-		
-		
-	}
-	public String[] removeDuplicates(String[] inputArray) {
-		// TODO Auto-generated method stub
-		String expected[]= {"Raj","Kumar","Ganesh"};
-		return expected;
-	}
 WebDriver driver;
 	@Test
 		public void testcase1() throws MalformedURLException
